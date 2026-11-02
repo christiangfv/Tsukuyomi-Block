@@ -149,7 +149,7 @@ namespace Devdog.InventoryPro
         protected virtual void Awake()
         {
             currentCategory = startCraftingCategory;
-            progressContainer = new CraftingProgressContainer(this, GetInstanceID(), GetComponent<AudioSource>());
+            progressContainer = new CraftingProgressContainer(this, GetEntityId(), GetComponent<AudioSource>());
 
             window.OnShow += OnWindowShown;
             window.OnHide += OnWindowHidden;
@@ -268,7 +268,7 @@ namespace Devdog.InventoryPro
 
             if (_forceSingleInstance)
             {
-                this.progressContainer = new CraftingProgressContainer(this, GetInstanceID(), GetComponent<AudioSource>());
+                this.progressContainer = new CraftingProgressContainer(this, GetEntityId(), GetComponent<AudioSource>());
             }
             else
             {
@@ -284,7 +284,7 @@ namespace Devdog.InventoryPro
         {
             // In case someone would like to use it with a trigger and without.
             // Need a new object, otherwise progress would be stored in the last used trigger.
-            progressContainer = new CraftingProgressContainer(this, GetInstanceID(), GetComponent<AudioSource>());
+            progressContainer = new CraftingProgressContainer(this, GetEntityId(), GetComponent<AudioSource>());
             overrideRemoveItemsFromCollection = null;
             overrideStoreRewardItemsInCollection = null;
 

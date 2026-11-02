@@ -228,7 +228,7 @@ namespace Devdog.InventoryPro.Demo
                 {
                     Rigidbody body = drop.GetComponent<Rigidbody>();
                     if (body != null)
-                        body.velocity = new Vector3(UnityEngine.Random.Range(-1f, 1f), 3f, UnityEngine.Random.Range(-1f, 1f));
+                        body.linearVelocity = new Vector3(UnityEngine.Random.Range(-1f, 1f), 3f, UnityEngine.Random.Range(-1f, 1f));
 
                 }
             }

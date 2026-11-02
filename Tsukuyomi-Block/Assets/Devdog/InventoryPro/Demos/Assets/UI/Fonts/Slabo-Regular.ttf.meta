@@ -1,19 +1,22 @@
 fileFormatVersion: 2
 guid: 411b4af9077d1064b8c7257d533541ca
-timeCreated: 1423839999
-licenseType: Store
 TrueTypeFontImporter:
-  serializedVersion: 2
+  externalObjects: {}
+  serializedVersion: 4
   fontSize: 16
   forceTextureCase: -2
-  characterSpacing: 1
-  characterPadding: 0
+  characterSpacing: 0
+  characterPadding: 1
   includeFontData: 1
-  use2xBehaviour: 0
   fontNames:
   - Slabo
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  subsetRecipes: []
   userData: 
   assetBundleName: 
   assetBundleVariant: 

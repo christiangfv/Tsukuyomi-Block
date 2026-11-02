@@ -30,8 +30,8 @@ namespace Devdog.InventoryPro.Demo
 
         private void AddVelocity(Vector2 velocity)
         {
-            _rigid.velocity = _rigid.velocity + velocity;
-            _rigid.velocity = Vector3.ClampMagnitude(_rigid.velocity, maxSpeed);
+            _rigid.linearVelocity = _rigid.linearVelocity + velocity;
+            _rigid.linearVelocity = Vector3.ClampMagnitude(_rigid.linearVelocity, maxSpeed);
         }
 
         public void Update()

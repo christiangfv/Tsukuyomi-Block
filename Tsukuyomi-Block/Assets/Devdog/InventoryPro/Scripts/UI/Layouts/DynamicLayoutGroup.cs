@@ -54,6 +54,7 @@ namespace Devdog.InventoryPro.UI
 
             SetLayoutInputForAxis(
                 padding.horizontal + (cellSize.x + spacing.x) * minColumns - spacing.x,
+                float.PositiveInfinity,
                 padding.horizontal + (cellSize.x + spacing.x) * preferredColumns - spacing.x,
                 -1, 0);
         }
@@ -65,7 +66,7 @@ namespace Devdog.InventoryPro.UI
             int minRows = Mathf.CeilToInt(rectChildren.Count / (float)m_ColumnsCount - 0.001f);
 
             float minSpace = padding.vertical + (cellSize.y + spacing.y) * minRows - spacing.y;
-            SetLayoutInputForAxis(minSpace, minSpace, -1, 1);
+            SetLayoutInputForAxis(minSpace, float.PositiveInfinity, minSpace, -1, 1);
         }
 
         public override void SetLayoutHorizontal()

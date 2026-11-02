@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SiguienteNivel : MonoBehaviour {
 
@@ -15,7 +16,7 @@ public class SiguienteNivel : MonoBehaviour {
 
     void CargarNivel()
     {
-        Application.LoadLevel(nivelACargar);
+        SceneManager.LoadScene(nivelACargar);
     }
 
     public bool EsUltimoNivel()

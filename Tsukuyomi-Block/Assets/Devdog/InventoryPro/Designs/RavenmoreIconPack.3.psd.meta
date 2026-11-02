@@ -9,46 +9,103 @@ labels:
 - Pro
 - UI
 - UX
-timeCreated: 1437391653
-licenseType: Store
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: RavenmoreIconPack.3_0
-    21300002: RavenmoreIconPack.3_1
-    21300004: RavenmoreIconPack.3_2
-    21300006: RavenmoreIconPack.3_3
-    21300008: RavenmoreIconPack.3_4
-    21300010: RavenmoreIconPack.3_5
-    21300012: RavenmoreIconPack.3_6
-    21300014: RavenmoreIconPack.3_7
-    21300016: RavenmoreIconPack.3_8
-    21300018: RavenmoreIconPack.3_9
-    21300020: RavenmoreIconPack.3_10
-    21300022: RavenmoreIconPack.3_11
-    21300024: RavenmoreIconPack.3_12
-    21300026: RavenmoreIconPack.3_13
-    21300028: RavenmoreIconPack.3_14
-    21300030: RavenmoreIconPack.3_15
-    21300032: RavenmoreIconPack.3_16
-    21300034: RavenmoreIconPack.3_17
-    21300036: RavenmoreIconPack.3_18
-    21300038: RavenmoreIconPack.3_19
-    21300040: RavenmoreIconPack.3_20
-    21300042: RavenmoreIconPack.3_21
-    21300044: RavenmoreIconPack.3_22
-    21300046: RavenmoreIconPack.3_23
-    21300048: RavenmoreIconPack.3_24
-    21300050: RavenmoreIconPack.3_25
-    21300052: RavenmoreIconPack.3_26
-    21300054: RavenmoreIconPack.3_27
-  serializedVersion: 2
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: RavenmoreIconPack.3_0
+  - first:
+      213: 21300002
+    second: RavenmoreIconPack.3_1
+  - first:
+      213: 21300004
+    second: RavenmoreIconPack.3_2
+  - first:
+      213: 21300006
+    second: RavenmoreIconPack.3_3
+  - first:
+      213: 21300008
+    second: RavenmoreIconPack.3_4
+  - first:
+      213: 21300010
+    second: RavenmoreIconPack.3_5
+  - first:
+      213: 21300012
+    second: RavenmoreIconPack.3_6
+  - first:
+      213: 21300014
+    second: RavenmoreIconPack.3_7
+  - first:
+      213: 21300016
+    second: RavenmoreIconPack.3_8
+  - first:
+      213: 21300018
+    second: RavenmoreIconPack.3_9
+  - first:
+      213: 21300020
+    second: RavenmoreIconPack.3_10
+  - first:
+      213: 21300022
+    second: RavenmoreIconPack.3_11
+  - first:
+      213: 21300024
+    second: RavenmoreIconPack.3_12
+  - first:
+      213: 21300026
+    second: RavenmoreIconPack.3_13
+  - first:
+      213: 21300028
+    second: RavenmoreIconPack.3_14
+  - first:
+      213: 21300030
+    second: RavenmoreIconPack.3_15
+  - first:
+      213: 21300032
+    second: RavenmoreIconPack.3_16
+  - first:
+      213: 21300034
+    second: RavenmoreIconPack.3_17
+  - first:
+      213: 21300036
+    second: RavenmoreIconPack.3_18
+  - first:
+      213: 21300038
+    second: RavenmoreIconPack.3_19
+  - first:
+      213: 21300040
+    second: RavenmoreIconPack.3_20
+  - first:
+      213: 21300042
+    second: RavenmoreIconPack.3_21
+  - first:
+      213: 21300044
+    second: RavenmoreIconPack.3_22
+  - first:
+      213: 21300046
+    second: RavenmoreIconPack.3_23
+  - first:
+      213: 21300048
+    second: RavenmoreIconPack.3_24
+  - first:
+      213: 21300050
+    second: RavenmoreIconPack.3_25
+  - first:
+      213: 21300052
+    second: RavenmoreIconPack.3_26
+  - first:
+      213: 21300054
+    second: RavenmoreIconPack.3_27
+  externalObjects: {}
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -56,36 +113,81 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 8
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    serializedVersion: 2
+    filterMode: 1
     aniso: 16
-    mipBias: -1
-    wrapMode: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationMethod: 0
   spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -100,8 +202,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_1
       rect:
@@ -113,8 +224,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_2
       rect:
@@ -126,8 +246,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_3
       rect:
@@ -139,8 +268,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_4
       rect:
@@ -152,8 +290,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_5
       rect:
@@ -165,8 +312,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_6
       rect:
@@ -178,8 +334,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_7
       rect:
@@ -191,8 +356,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_8
       rect:
@@ -204,8 +378,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_9
       rect:
@@ -217,8 +400,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_10
       rect:
@@ -230,8 +422,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_11
       rect:
@@ -243,8 +444,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_12
       rect:
@@ -256,8 +466,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_13
       rect:
@@ -269,8 +488,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_14
       rect:
@@ -282,8 +510,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_15
       rect:
@@ -295,8 +532,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_16
       rect:
@@ -308,8 +554,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_17
       rect:
@@ -321,8 +576,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_18
       rect:
@@ -334,8 +598,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_19
       rect:
@@ -347,8 +620,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_20
       rect:
@@ -360,8 +642,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_21
       rect:
@@ -373,8 +664,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_22
       rect:
@@ -386,8 +686,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_23
       rect:
@@ -399,8 +708,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_24
       rect:
@@ -412,8 +730,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_25
       rect:
@@ -425,8 +752,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_26
       rect:
@@ -438,8 +774,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RavenmoreIconPack.3_27
       rect:
@@ -451,10 +796,61 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
-  spritePackingTag: 
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RavenmoreIconPack.3_0: 21300000
+      RavenmoreIconPack.3_1: 21300002
+      RavenmoreIconPack.3_10: 21300020
+      RavenmoreIconPack.3_11: 21300022
+      RavenmoreIconPack.3_12: 21300024
+      RavenmoreIconPack.3_13: 21300026
+      RavenmoreIconPack.3_14: 21300028
+      RavenmoreIconPack.3_15: 21300030
+      RavenmoreIconPack.3_16: 21300032
+      RavenmoreIconPack.3_17: 21300034
+      RavenmoreIconPack.3_18: 21300036
+      RavenmoreIconPack.3_19: 21300038
+      RavenmoreIconPack.3_2: 21300004
+      RavenmoreIconPack.3_20: 21300040
+      RavenmoreIconPack.3_21: 21300042
+      RavenmoreIconPack.3_22: 21300044
+      RavenmoreIconPack.3_23: 21300046
+      RavenmoreIconPack.3_24: 21300048
+      RavenmoreIconPack.3_25: 21300050
+      RavenmoreIconPack.3_26: 21300052
+      RavenmoreIconPack.3_27: 21300054
+      RavenmoreIconPack.3_3: 21300006
+      RavenmoreIconPack.3_4: 21300008
+      RavenmoreIconPack.3_5: 21300010
+      RavenmoreIconPack.3_6: 21300012
+      RavenmoreIconPack.3_7: 21300014
+      RavenmoreIconPack.3_8: 21300016
+      RavenmoreIconPack.3_9: 21300018
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 

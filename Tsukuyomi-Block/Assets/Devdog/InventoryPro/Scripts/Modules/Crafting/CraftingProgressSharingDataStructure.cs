@@ -25,7 +25,7 @@ namespace Devdog.InventoryPro
 
     public class CraftingProgressSharingDataStructure<T> where T : CraftingProgressContainer
     {
-        public delegate T CreateNewInstance(ICraftingActionValidator validator, int id);
+        public delegate T CreateNewInstance(ICraftingActionValidator validator, EntityId id);
 
         private static T _singleInstance;
 //        private static List<T> _list;
@@ -64,7 +64,7 @@ namespace Devdog.InventoryPro
         }
 
 
-        public CraftingProgressContainer Get(ICraftingActionValidator validator, int instanceID, int category, CraftingProgressShareSetting shareSetting)
+        public CraftingProgressContainer Get(ICraftingActionValidator validator, EntityId instanceID, int category, CraftingProgressShareSetting shareSetting)
         {
             if (IsShared(shareSetting))
             {
@@ -103,7 +103,7 @@ namespace Devdog.InventoryPro
         }
 
 
-        public void Remove(int instanceID, int category, CraftingProgressShareSetting shareSetting)
+        public void Remove(EntityId instanceID, int category, CraftingProgressShareSetting shareSetting)
         {
             if (IsShared(shareSetting))
             {
@@ -118,7 +118,7 @@ namespace Devdog.InventoryPro
             }
         }
 
-        public T[] ToArray(int instanceID, int category, CraftingProgressShareSetting shareSetting)
+        public T[] ToArray(EntityId instanceID, int category, CraftingProgressShareSetting shareSetting)
         {
             if (IsShared(shareSetting))
             {

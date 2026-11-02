@@ -34,3 +34,11 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Unity 6 local state and editor output
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+*.slnx
+.DS_Store

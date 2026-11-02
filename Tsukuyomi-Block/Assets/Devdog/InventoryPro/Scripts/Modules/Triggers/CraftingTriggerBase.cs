@@ -63,7 +63,7 @@ namespace Devdog.InventoryPro
         public static CraftingProgressSharingDataStructure<CraftingProgressContainer> progressContainerDataStructure { get; set; }
  
 
-        private static CraftingProgressContainer CreateNewProgressContainer(ICraftingActionValidator validator, int id)
+        private static CraftingProgressContainer CreateNewProgressContainer(ICraftingActionValidator validator, EntityId id)
         {
             return new CraftingProgressContainer(validator, id, validator.gameObject.GetComponent<AudioSource>());
         }
@@ -74,10 +74,10 @@ namespace Devdog.InventoryPro
 
             if (progressContainerDataStructure == null)
             {
-                progressContainerDataStructure = new CraftingProgressSharingDataStructure<CraftingProgressContainer>(CreateNewProgressContainer, CreateNewProgressContainer(this, GetInstanceID()));
+                progressContainerDataStructure = new CraftingProgressSharingDataStructure<CraftingProgressContainer>(CreateNewProgressContainer, CreateNewProgressContainer(this, GetEntityId()));
             }
 
-            progressContainer = progressContainerDataStructure.Get(this, GetInstanceID(), craftingCategory.ID + GetType().GetHashCode(), _progressShareSetting);
+            progressContainer = progressContainerDataStructure.Get(this, GetEntityId(), craftingCategory.ID + GetType().GetHashCode(), _progressShareSetting);
             progressContainer.removeItemsOnCraftStart = removeItemsOnCraftStart;
             progressContainer.OnCraftStart += NotifyOnCraftStart;
             progressContainer.OnCraftSuccess += NotifyOnCraftSuccess;

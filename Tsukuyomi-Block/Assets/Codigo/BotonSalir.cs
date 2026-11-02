@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BotonSalir : MonoBehaviour {
 
@@ -17,7 +18,7 @@ public class BotonSalir : MonoBehaviour {
             }
             else
             {
-                Application.LoadLevel("Portada");
+                SceneManager.LoadScene("Portada");
             }
         }
 	}

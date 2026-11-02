@@ -25,8 +25,9 @@ public class movPelota : MonoBehaviour {
 
     public void DetenerMovimiento()
     {
+            if (!rigBody.isKinematic)
+                rigBody.linearVelocity = Vector3.zero;
             rigBody.isKinematic = true;
-            rigBody.velocity = Vector3.zero;
         }
         // Update is called once per frame
         void Update () {

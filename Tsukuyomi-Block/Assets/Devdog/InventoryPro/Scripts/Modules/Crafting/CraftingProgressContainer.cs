@@ -102,9 +102,9 @@ namespace Devdog.InventoryPro
 //        public ItemCollectionBase rewardsCollection { get; set; }
 
 
-        public int instanceID { get; protected set; }
+        public EntityId instanceID { get; protected set; }
 
-        public CraftingProgressContainer(ICraftingActionValidator validator, int instanceID, AudioSource audioSource)
+        public CraftingProgressContainer(ICraftingActionValidator validator, EntityId instanceID, AudioSource audioSource)
         {
             this.validator = validator;
             this.audioSource = audioSource;
