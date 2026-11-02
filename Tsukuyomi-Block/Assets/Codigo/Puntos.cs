@@ -10,6 +10,7 @@ public class Puntos : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        ActualizarMarcadorPuntos();
 		
 	}
 

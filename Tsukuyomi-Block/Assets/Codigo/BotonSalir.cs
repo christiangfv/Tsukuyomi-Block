@@ -18,7 +18,7 @@ public class BotonSalir : MonoBehaviour {
             }
             else
             {
-                SceneManager.LoadScene("Portada");
+                Partida.VolverAlMenu();
             }
         }
 	}

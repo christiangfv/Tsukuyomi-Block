@@ -22,8 +22,8 @@ Tsukuyomi-Block is a 3D take on the classic Arkanoid/Breakout formula:
 
 - 🏓 **Move the paddle** left/right with keyboard (← →)
 - 🎱 **Launch the ball** with the Fire button (Left Ctrl / Z / click)
-- 💥 **Destroy blocks** to earn points; automatic victory detection is still pending
-- ❤️ **3 lives** — if the ball falls, you lose a life and reset
+- 💥 **Destroy all 30 blocks** to win and see your final score
+- ❤️ **3 lives** — losing the last life ends the game; retry or return to the menu
 - 🏆 **Score** increases with each block destroyed
 
 > *"Tsukuyomi" — the moon god in Japanese mythology. The aesthetic inspiration for the game's visual theme.*
@@ -48,7 +48,7 @@ Tsukuyomi-Block is a 3D take on the classic Arkanoid/Breakout formula:
 | 💥 **Particle FX** | Block destruction effects via KriptoFX Realistic Effects Pack v4 |
 | ❤️ **Lives system** | 3 lives, ball and paddle reset on loss |
 | 🏆 **Score tracking** | Points displayed via Unity UI |
-| 📦 **Level loading** | Configurable scene loading; automatic completion trigger is pending |
+| 🏁 **Complete game loop** | Automatic victory/defeat, final score, retry, and menu actions |
 | 🎨 **3D Visual style** | Full 3D environment, not a 2D sprite game |
 
 ---
@@ -57,6 +57,8 @@ Tsukuyomi-Block is a 3D take on the classic Arkanoid/Breakout formula:
 
 ```
 Tsukuyomi-Block/Assets/Codigo/
+├── Partida.cs          → Game state, automatic outcomes, retry and menu
+├── InterfazPartida.cs  → Responsive controls and result UI
 ├── Blocks.cs           → Block behavior: detect collision, spawn FX, destroy, +1 point
 ├── movPelota.cs        → Ball: initial force launch, reset on life loss
 ├── MovBarra.cs         → Paddle: horizontal movement clamped to screen bounds
@@ -81,11 +83,11 @@ Tsukuyomi-Block/Assets/Codigo/
       │
       ├── Ball hits block → particle FX + Destroy + score++
       │
-      ├── All blocks gone → automatic victory handling is unfinished
+      ├── All blocks gone → Victory + score → Retry / Menu
       │
       └── Ball hits floor → lives-- → reset paddle + ball
                                 │
-                                └── Game-over handling is unfinished
+                                └── lives == 0 → Defeat + score → Retry / Menu
 ```
 
 ---
@@ -112,13 +114,13 @@ cd Tsukuyomi-Block
 
 3. **Open the starting scene**
    - In the Project panel: `Assets/Scenes/Portada`
-   - Press ▶️ Play
+   - Press ▶️ Play, then choose **Jugar** or use Ctrl / Z / click
 
 ---
 
-## Minimum remaining gameplay work
+## Completed gameplay minimums
 
-See [Mínimos pendientes del juego](docs/minimos-del-juego.md) for the prioritized checklist: defeat, victory, retry/menu actions, visible controls, and ball constraints.
+Victory, defeat, retry/menu actions, visible controls, and ball safeguards are implemented. See the [completed checklist and verification details](docs/minimos-del-juego.md).
 
 ## Unity 6 migration and checks
 
@@ -138,13 +140,16 @@ On macOS, run from the repository root (close any editor already using the proje
 # Exercise real physics collisions, particles, score, lives, ball reset, and level-to-menu loading
 ./scripts/unity.sh -batchmode -executeMethod MigrationValidation.StartPlaySmoke -logFile /tmp/tsukuyomi-smoke.log
 
+# Check defeat/victory, duplicate events, retry/menu buttons, and ball safeguards
+./scripts/unity.sh -batchmode -executeMethod GameplayAcceptance.Run -logFile /tmp/tsukuyomi-gameplay.log
+
 # Build a standalone application for Apple Silicon
 ./scripts/unity.sh -batchmode -quit -executeMethod MigrationValidation.BuildMac -logFile /tmp/tsukuyomi-build.log
 ```
 
 The app is written to `Tsukuyomi-Block/Builds/macOS/Tsukuyomi-Block.app`; rendered scene captures are in `Tsukuyomi-Block/Builds/screenshots/`. These outputs and Unity's local caches are ignored by Git. Set `UNITY_EDITOR` to the editor executable if it is installed elsewhere. The helper uses a short temporary path to avoid macOS socket path limits in desktop-agent environments.
 
-Validated: scene references, 30 level blocks, legacy input configuration, real block/floor collision callbacks, score/lives UI updates, ball reset, delayed return to the menu, rendered captures of both scenes, and the ARM64 standalone build. Keyboard/mouse input has not been automated; check it with Play in the editor. This migration preserves the existing gameplay rules rather than adding new levels or completing unfinished game-over logic.
+Validated: scene references, 30 level blocks, legacy input configuration, real block/floor collision callbacks, score/lives UI updates, ball reset, delayed return to the menu, rendered captures of both scenes, and the ARM64 standalone build. The follow-up gameplay acceptance checks also verify victory/defeat, resets, pointer raycasts, keyboard navigation/Submit, and ball safeguards. Physical operating-system key presses are not simulated; check the actual bindings with Play in the editor.
 
 ---
 

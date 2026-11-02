@@ -6,8 +6,9 @@ public class Suelo : MonoBehaviour {
 
     public Vidas vidas;
 
-    private void OnTriggerEnter()
+    private void OnTriggerEnter(Collider other)
     {
-        vidas.PerderVida();
+        var pelota = other.attachedRigidbody != null ? other.attachedRigidbody.GetComponent<movPelota>() : null;
+        if (pelota != null && pelota.EnJuego) vidas.PerderVida();
     }
 }

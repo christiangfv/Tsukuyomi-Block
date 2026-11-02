@@ -174,14 +174,13 @@ public static class MigrationValidation
                     ballStart = ball.transform.position;
                     scoreStart = Puntos.puntos;
                     livesStart = Vidas.vidas;
-                    var block = UnityEngine.Object.FindFirstObjectByType<Blocks>();
+                    var block = UnityEngine.Object.FindObjectsByType<Blocks>(FindObjectsSortMode.None).OrderBy(b => b.GetComponent<Collider>().bounds.min.y).First();
                     var bounds = block.GetComponent<Collider>().bounds;
                     Physics.simulationMode = SimulationMode.Script;
-                    ball.transform.SetParent(null);
-                    ball.rigBody.isKinematic = false;
-                    ball.transform.position = bounds.center + Vector3.back * (bounds.extents.z + 1f);
+                    ball.Lanzar();
+                    ball.transform.position = new Vector3(bounds.center.x, bounds.min.y - 0.8f, ball.transform.position.z);
                     ball.rigBody.position = ball.transform.position;
-                    ball.rigBody.linearVelocity = Vector3.forward * 10f;
+                    ball.rigBody.linearVelocity = Vector3.up * 12f;
                     Physics.SyncTransforms();
                     Debug.Log("SMOKE target=" + bounds + " ball=" + ball.GetComponent<Collider>().bounds + " enabled=" + block.GetComponent<Collider>().enabled);
                     stage = 1;
@@ -238,7 +237,9 @@ public static class MigrationValidation
         catch (Exception error) { FinishSmoke(1, error.ToString()); }
     }
 
-    private static void CaptureScene(string path)
+    private static void CaptureScene(string path) { CaptureSceneAtSize(path, 1280, 720); }
+
+    public static void CaptureSceneAtSize(string path, int width, int height)
     {
         var camera = UnityEngine.Object.FindObjectsByType<Camera>(FindObjectsSortMode.None).FirstOrDefault(c => c.enabled);
         Require(camera != null, "Scene requires an enabled camera.");
@@ -248,8 +249,8 @@ public static class MigrationValidation
         var distances = overlays.Select(c => c.planeDistance).ToArray();
         var previousTarget = camera.targetTexture;
         var previousActive = RenderTexture.active;
-        var target = RenderTexture.GetTemporary(1280, 720, 24);
-        var image = new Texture2D(1280, 720, TextureFormat.RGB24, false);
+        var target = RenderTexture.GetTemporary(width, height, 24);
+        var image = new Texture2D(width, height, TextureFormat.RGB24, false);
         try
         {
             camera.targetTexture = target;
@@ -261,7 +262,7 @@ public static class MigrationValidation
             Canvas.ForceUpdateCanvases();
             camera.Render();
             RenderTexture.active = target;
-            image.ReadPixels(new Rect(0, 0, 1280, 720), 0, 0);
+            image.ReadPixels(new Rect(0, 0, width, height), 0, 0);
             image.Apply();
             File.WriteAllBytes(path, image.EncodeToPNG());
         }

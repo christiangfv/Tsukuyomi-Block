@@ -19,6 +19,7 @@ public class MovBarra : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if (Partida.Actual != null && Partida.Actual.Finalizada) return;
         float tecladoHorizontal = Input.GetAxisRaw("Horizontal");
         float posX = transform.position.x + (tecladoHorizontal * velocidad * Time.deltaTime);
         transform.position = new Vector3(Mathf.Clamp(posX,-9,9),transform.position.y, transform.position.z);

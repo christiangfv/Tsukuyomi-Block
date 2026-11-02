@@ -11,6 +11,11 @@ public class Vidas : MonoBehaviour
     public movPelota pelota;
     public MovBarra barra;
 
+    void Awake()
+    {
+        if (GetComponent<Partida>() == null) gameObject.AddComponent<Partida>();
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -24,8 +29,14 @@ public class Vidas : MonoBehaviour
 
     public void PerderVida()
     {
-        Vidas.vidas--;
+        if (Vidas.vidas <= 0 || (Partida.Actual != null && Partida.Actual.Finalizada)) return;
+        Vidas.vidas = Mathf.Max(0, Vidas.vidas - 1);
         ActualizarMarcadorVidas();
+
+        if (Vidas.vidas == 0) {
+            Partida.Actual.Perder();
+            return;
+        }
 
         barra.Reset();
         pelota.Reset();

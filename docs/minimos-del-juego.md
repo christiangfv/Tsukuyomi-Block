@@ -1,34 +1,33 @@
-# Mínimos pendientes para cerrar el juego
+# Mínimos del juego: implementados
 
-Revisión del código y de las dos escenas tras la migración a Unity 6.6, el 3 de noviembre de 2026. Esta lista describe trabajo pendiente; no se ha implementado como parte de la migración.
+Los cinco puntos solicitados quedaron implementados en Unity 6.6. Se conservaron las dos escenas, sus referencias y el aspecto 3D original. La interfaz nueva se crea al iniciar la escena, sin sobrescribir escenas abiertas en el editor.
 
-## Imprescindibles
+- [x] **Derrota al agotar las vidas.** La tercera vida perdida termina la partida, detiene la pelota y la barra y muestra resultado/puntuación. Se ignoran pérdidas posteriores y las vidas no bajan de cero.
+- [x] **Victoria al destruir el último bloque.** Se cuentan los 30 bloques; cada uno puntúa una sola vez. El último activa la pantalla de victoria con los 30 puntos, sin volver al menú automáticamente.
+- [x] **Reintentar y menú.** Ambas pantallas de resultado tienen botones. Reintentar restaura tres vidas, cero puntos, los 30 bloques y la pelota en la barra; Menú vuelve a la portada, desde donde se puede comenzar otra partida.
+- [x] **Controles visibles.** La portada incluye «Jugar» y los controles. Durante la partida se muestran mover (A/D o flechas), lanzar (Ctrl, Z o clic) y menú (Esc). También se puede navegar entre las acciones de resultado y confirmarlas con el sistema de eventos de Unity.
+- [x] **Protección de la pelota.** Movimiento limitado al plano X/Y, sin rotación física, velocidad entre 10 y 18 unidades/s, corrección de trayectorias casi horizontales y pérdida de una sola vida si sale de los límites del campo.
 
-1. **Derrota al agotar las vidas.** `Vidas.PerderVida()` resta una vida y reinicia pelota/barra, pero no comprueba si quedan vidas. Al llegar a cero debe detener la partida, impedir valores negativos y mostrar el resultado.
-2. **Victoria al destruir el último bloque.** `Blocks.OnCollisionEnter()` destruye el bloque y suma un punto, pero no contabiliza los bloques restantes. `SiguienteNivel.ActivarCarga()` existe, pero ningún script del juego lo llama automáticamente. Detectar el final del nivel, detener la pelota y mostrar victoria/puntuación. Actualmente solo hay un nivel jugable; no hace falta añadir más para cerrar el juego.
-3. **Reintentar y volver al menú desde el resultado.** Reutilizar el reinicio de vidas/puntos que ya hace `ComenzarPartida`, con acciones claras tras victoria o derrota. Esc ya permite regresar al menú durante el nivel.
-4. **Controles visibles.** La portada muestra el título, pero no explica cómo empezar. Indicar comenzar/lanzar (Ctrl izquierdo, Z o clic), mover (flechas/A–D) y volver al menú (Esc). No anunciar Espacio mientras no esté configurado.
-5. **Asegurar el plano y los límites de la pelota.** El Rigidbody no tiene restricciones de posición/rotación. Para un Breakout que se juega en X/Y, fijar Z y verificar rebotes, velocidad y recuperación si la pelota sale del área o queda en una trayectoria horizontal. Es una medida de robustez pendiente, no un fallo reproducido durante la migración.
+## Comprobaciones
 
-## Criterio mínimo de aceptación
+`GameplayAcceptance.Run` carga las escenas reales y comprueba:
 
-- Perder las tres vidas termina la partida una sola vez.
-- Destruir los 30 bloques termina el nivel una sola vez.
-- Reintentar restaura tres vidas, cero puntos y las posiciones iniciales.
-- Volver al menú y empezar otra vez funciona sin conservar una partida anterior.
-- Comprobar manualmente teclado/ratón y una partida completa ganada y perdida en la aplicación compilada.
+- Derrota con tres vidas y protección contra eventos posteriores.
+- Victoria con 30 bloques y protección contra impactos repetidos.
+- Reintentos tras derrota y victoria, regreso al menú y comienzo limpio.
+- Botones mediante raycasts/eventos de puntero y navegación/Submit del EventSystem.
+- Lanzamiento, velocidad, plano, recuperación fuera del campo y colisiones físicas reales con bloque y suelo.
+- Capturas del menú, nivel, victoria y derrota; pantalla de resultado en formato vertical.
 
-La migración ya verificó compilación ARM64, arranque, referencias de escenas, colisiones reales, partículas, puntos, vidas, reinicio de la pelota y carga del menú. La prueba de carga del menú activó explícitamente `SiguienteNivel`; no demuestra que la victoria esté conectada automáticamente.
+La prueba de regresión `MigrationValidation.StartPlaySmoke` sigue pasando. La pulsación física de las teclas del sistema operativo no se simula: la prueba de lanzamiento usa la misma acción pública que llama `Update` al detectar Fire1.
 
-## Después de estos mínimos
+## Mejoras opcionales posteriores
 
-Pausa, sonidos/música, récord local, más niveles y mejoras visuales pueden venir después. No son necesarios para completar primero el ciclo básico de una partida.
+Pausa, sonidos/música, récord local, más niveles y mejoras visuales. El ciclo básico de la partida ya está cerrado.
 
-## Evidencia en el repositorio
+## Código
 
-- [Vidas.cs](../Tsukuyomi-Block/Assets/Codigo/Vidas.cs)
-- [Blocks.cs](../Tsukuyomi-Block/Assets/Codigo/Blocks.cs)
-- [SiguienteNivel.cs](../Tsukuyomi-Block/Assets/Codigo/SiguienteNivel.cs)
-- [ComenzarPartida.cs](../Tsukuyomi-Block/Assets/Codigo/ComenzarPartida.cs)
-- [Nivel 01](../Tsukuyomi-Block/Assets/Scenes/Nivel%2001.unity)
-- [Controles](../Tsukuyomi-Block/ProjectSettings/InputManager.asset)
+- [Partida](../Tsukuyomi-Block/Assets/Codigo/Partida.cs): estado, victoria/derrota y reinicios.
+- [InterfazPartida](../Tsukuyomi-Block/Assets/Codigo/InterfazPartida.cs): controles, botones y resultados.
+- [Pelota](../Tsukuyomi-Block/Assets/Codigo/movPelota.cs): lanzamiento y protección física.
+- [Prueba de aceptación](../Tsukuyomi-Block/Assets/Editor/GameplayAcceptance.cs).
